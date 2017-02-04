@@ -3838,6 +3838,12 @@ impl NotW {
 // Here we extend the peripheral API -- AKA ~~svd2rust is~~ SVD files are great
 // but not perfect
 
+impl W {
+    pub fn write_word(&mut self, value: u32) {
+        self.register.write(value);
+    }
+}
+
 impl Mpin {
     # [ doc = "Masked port register (bit 0 = GPIOm[0], bit 1 = GPIOm[1], ..., bit 31 = GPIOm[31]). 0 = clear output bit if the corresponding bit in the MASK register is 0. 1 = set output bit if the corresponding bit in the MASK register is 0." ]
     pub fn write_word(&mut self, value: u32) {
