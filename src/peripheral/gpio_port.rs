@@ -3850,3 +3850,20 @@ impl Mpin {
     }
 }
 
+impl Set {
+    pub fn write_word(&mut self, value: u32) {
+        self.register.write(value);
+    }
+}
+
+impl Clr {
+    pub fn write_word(&mut self, value: u32) {
+        self.register.write(value);
+    }
+}
+
+impl Not {
+    pub fn write_word(&mut self, value: u32) {
+        self.register.write(value);
+    }
+}
