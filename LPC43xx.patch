@@ -1,0 +1,3218 @@
+--- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
++++ LPC43xx.svd	2017-08-19 14:27:18.779760042 -0700
+@@ -142,82 +142,82 @@
+ 				<enumeratedValues>												
+ 				<name>ENUM</name>												
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_0_RISING_EDGE</name>										
+ 						<description>Rising edges on input 0.</description>										
+ 						<value>0x0</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_0_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 0.</description>										
+ 						<value>0x1</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_1_RISING_EDGE</name>										
+ 						<description>Rising edges on input 1.</description>										
+ 						<value>0x2</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_1_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 1.</description>										
+ 						<value>0x3</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_2_RISING_EDGE</name>										
+ 						<description>Rising edges on input 2.</description>										
+ 						<value>0x4</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_2_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 2.</description>										
+ 						<value>0x5</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_3_RISING_EDGE</name>										
+ 						<description>Rising edges on input 3.</description>										
+ 						<value>0x6</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_3_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 3.</description>										
+ 						<value>0x7</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_4_RISING_EDGE</name>										
+ 						<description>Rising edges on input 4.</description>										
+ 						<value>0x8</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_4_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 4.</description>										
+ 						<value>0x9</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_5_RISING_EDGE</name>										
+ 						<description>Rising edges on input 5.</description>										
+ 						<value>0xA</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_5_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 5.</description>										
+ 						<value>0xB</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_6_RISING_EDGE</name>										
+ 						<description>Rising edges on input 6.</description>										
+ 						<value>0xC</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_6_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 6.</description>										
+ 						<value>0xD</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>RISING_EDGES_ON_INPU</name>										
++						<name>INPUT_7_RISING_EDGE</name>										
+ 						<description>Rising edges on input 7.</description>										
+ 						<value>0xE</value>										
+ 					</enumeratedValue>											
+ 					<enumeratedValue>											
+-						<name>FALLING_EDGES_ON_INP</name>										
++						<name>INPUT_7_FALLING_EDGE</name>										
+ 						<description>Falling edges on input 7.</description>										
+ 						<value>0xF</value>										
+ 					</enumeratedValue>											
+@@ -3678,7 +3678,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED__DEFAULT_</name>
++									<name>DISABLED</name>
+ 									<description>Disabled (default). Disabling the DMA Controller reduces power consumption.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -4157,12 +4157,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>THE_DESTINATION_ADDR</name>
++									<name>AFTER_XFER_NO_INC</name>
+ 									<description>The destination address is not incremented after each transfer.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>THE_DESTINATION_ADDR</name>
++									<name>AFTER_XFER_INC</name>
+ 									<description>The destination address is incremented after each transfer.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -4229,12 +4229,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>THE_TERMINAL_COUNT_I</name>
++									<name>TC_INT_DISABLED</name>
+ 									<description>The terminal count interrupt is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>THE_TERMINAL_COUNT_I</name>
++									<name>TC_INT_ENABLED</name>
+ 									<description>The terminal count interrupt is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -4278,82 +4278,82 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_SPIFI</name>
++									<name>SPIFI_SCTMATCH2_SGPIO14_TIMER3MATCH1</name>
+ 									<description>Source = SPIFI</description>
+ 									<value>0x0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_0_MAT</name>
++									<name>TIMER0MATCH0_USART0TX_AESIN</name>
+ 									<description>Source = Timer 0 match 0/UART0 transmit</description>
+ 									<value>0x1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_0_MAT</name>
++									<name>TIMER0MATCH1_USART0RX_AESOUT</name>
+ 									<description>Source = Timer 0 match 1/UART0 receive</description>
+ 									<value>0x2</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_1_MAT</name>
++									<name>TIMER1MATCH0_UART1TX_I2S1DMAREQ1_SSP1TX</name>
+ 									<description>Source = Timer 1 match 0/UART1 transmit</description>
+ 									<value>0x3</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_1_MAT</name>
++									<name>TIMER1MATCH1_UART1RX_I2S1DMAREQ2_SSP1RX</name>
+ 									<description>Source = Timer 1 match 1/UART 1 receive</description>
+ 									<value>0x4</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_2_MAT</name>
++									<name>TIMER2MATCH0_USART2TX_SSP1TX_SGPIO15</name>
+ 									<description>Source = Timer 2 match 0/UART 2 transmit</description>
+ 									<value>0x5</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_2_MAT</name>
++									<name>TIMER2MATCH1_USART2RX_SSP1RX_SGPIO14</name>
+ 									<description>Source = Timer 2 match 1/UART 2 receive</description>
+ 									<value>0x6</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_3_MAT</name>
++									<name>TIMER3MATCH0_UART3TX_SCTDMAREQ0_ADCHSWR</name>
+ 									<description>Source = Timer 3 match 0/UART3 transmit/SCT DMA request 0</description>
+ 									<value>0x7</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_TIMER_3_MAT</name>
++									<name>TIMER3MATCH1_UART3RX_SCTDMAREQ1_ADCHSRD</name>
+ 									<description>Source = Timer 3 match 1/UART3 receive/SCT DMA request 1</description>
+ 									<value>0x8</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_SSP0_RECEIV</name>
++									<name>SSP0RX_I2S0DMAREQ1_SCTDMAREQ1</name>
+ 									<description>Source = SSP0 receive/I2S channel 0</description>
+ 									<value>0x9</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_SSP0_TRANSM</name>
++									<name>SSP0TX_I2S0DMAREQ2_SCTDMAREQ0</name>
+ 									<description>Source = SSP0 transmit/I2S channel 1</description>
+ 									<value>0xA</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_SSP1_RECEIV</name>
++									<name>SSP1RX_SGPIO14_USART0TX</name>
+ 									<description>Source = SSP1 receive</description>
+ 									<value>0xB</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_SSP1_TRANSM</name>
++									<name>SSP1TX_SGPIO15_USART0RX</name>
+ 									<description>Source = SSP1 transmit</description>
+ 									<value>0xC</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_ADC0</name>
++									<name>ADC0_AESIN_SSP1RX_USART3RX</name>
+ 									<description>Source = ADC0</description>
+ 									<value>0xD</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_ADC1</name>
++									<name>ADC1_AESOUT_SSP1TX_USART3TX</name>
+ 									<description>Source = ADC1</description>
+ 									<value>0xE</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_EQ_DAC</name>
++									<name>DAC_SCTMATCH3_SGPIO15_TIMER3MATCH0</name>
+ 									<description>Source = DAC</description>
+ 									<value>0xF</value>
+ 								</enumeratedValue>
+@@ -4366,82 +4366,82 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_SPIFI</name>
++									<name>SPIFI_SCTMATCH2_SGPIO14_TIMER3MATCH1</name>
+ 									<description>Destination = SPIFI</description>
+ 									<value>0x0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER0MATCH0_UART0TX_AESIN</name>
+ 									<description>Destination = Timer 0 match 0/UART0 transmit</description>
+ 									<value>0x1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER0MATCH1_UART0RX_AESOUT</name>
+ 									<description>Destination = Timer 0 match 1/UART0 receive</description>
+ 									<value>0x2</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER1MATCH0_UART1TX_I2S1DMAREQ1_SSP1TX</name>
+ 									<description>Destination = Timer 1 match 0/UART1 transmit</description>
+ 									<value>0x3</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER1MATCH1_UART1RX_I2S1DMAREQ2_SSP1RX</name>
+ 									<description>Destination = Timer 1 match 1/UART 1 receive</description>
+ 									<value>0x4</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER2MATCH0_USART2TX_SSP1TX_SGPIO15</name>
+ 									<description>Destination = Timer 2 match 0/UART 2 transmit</description>
+ 									<value>0x5</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER2MATCH1_USART2RX_SSP1RX_SGPIO14</name>
+ 									<description>Destination = Timer 2 match 1/UART 2 receive</description>
+ 									<value>0x6</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER3MATCH0_UART3TX_SCTDMAREQ0_ADCHSWR</name>
+ 									<description>Destination = Timer 3 match 0/UART3 transmit/SCT DMA request 0</description>
+ 									<value>0x7</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_TIMER_</name>
++									<name>TIMER3MATCH1_UART3RX_SCTDMAREQ1_ADCHSRD</name>
+ 									<description>Destination = Timer 3 match 1/UART3 receive/SCT DMA request 1</description>
+ 									<value>0x8</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_SSP0_R</name>
++									<name>SSP0RX_I2S0DMAREQ1_SCTDMAREQ1</name>
+ 									<description>Destination = SSP0 receive/I2S channel 0</description>
+ 									<value>0x9</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_SSP0_T</name>
++									<name>SSP0TX_I2S0DMAREQ2_SCTDMAREQ0</name>
+ 									<description>Destination = SSP0 transmit/I2S channel 1</description>
+ 									<value>0xA</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_SSP1_R</name>
++									<name>SSP1RX_SGPIO14_USART0TX</name>
+ 									<description>Destination = SSP1 receive</description>
+ 									<value>0xB</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_SSP1_T</name>
++									<name>SSP1TX_SGPIO15_USART0RX</name>
+ 									<description>Destination = SSP1 transmit</description>
+ 									<value>0xC</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_ADC0</name>
++									<name>ADC0_AESIN_SSP1RX_USART3RX</name>
+ 									<description>Destination = ADC0</description>
+ 									<value>0xD</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_ADC1</name>
++									<name>ADC1_AESOUT_SSP1TX_USART3TX</name>
+ 									<description>Destination = ADC1</description>
+ 									<value>0xE</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DESTINATION_EQ_DAC</name>
++									<name>DAC_SCTMATCH3_SGPIO15_TIMER3MATCH0</name>
+ 									<description>Destination = DAC</description>
+ 									<value>0xF</value>
+ 								</enumeratedValue>
+@@ -4454,42 +4454,42 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>MEMORY_TO_MEMORY</name>
++									<name>MEMORY_TO_MEMORY_DMA_CTRL</name>
+ 									<description>Memory to memory (DMA control)</description>
+ 									<value>0x0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>MEMORY_TO_PERIPHERAL</name>
++									<name>MEMORY_TO_PERIPHERAL_DMA_CTRL</name>
+ 									<description>Memory to peripheral (DMA control)</description>
+ 									<value>0x1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>PERIPHERAL_TO_MEMORY</name>
++									<name>PERIPHERAL_TO_MEMORY_DMA_CTRL</name>
+ 									<description>Peripheral to memory (DMA control)</description>
+ 									<value>0x2</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_PERIPHERAL_TO</name>
++									<name>PERIPHERAL_TO_PERIPHERAL_DMA_CTRL</name>
+ 									<description>Source peripheral to destination peripheral (DMA control)</description>
+ 									<value>0x3</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_PERIPHERAL_TO</name>
++									<name>PERIPHERAL_TO_PERIPHERAL_CTRL</name>
+ 									<description>Source peripheral to destination peripheral (destination control)</description>
+ 									<value>0x4</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>MEMORY_TO_PERIPHERAL</name>
++									<name>MEMORY_TO_PERIPHERAL_CTRL</name>
+ 									<description>Memory to peripheral (peripheral control)</description>
+ 									<value>0x5</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>PERIPHERAL_TO_MEMORY</name>
++									<name>PERIPHERAL_CTRL_TO_MEMORY</name>
+ 									<description>Peripheral to memory (peripheral control)</description>
+ 									<value>0x6</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>SOURCE_PERIPHERAL_TO</name>
++									<name>PERIPHERAL_CTRL_TO_PERIPHERAL</name>
+ 									<description>Source peripheral to destination peripheral (source control)</description>
+ 									<value>0x7</value>
+ 								</enumeratedValue>
+@@ -8777,7 +8777,7 @@
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DISABLED</name>
++									<name>ENABLED</name>
+ 									<description>The periodic schedule status is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -8795,7 +8795,7 @@
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DISABLED</name>
++									<name>ENABLED</name>
+ 									<description>Asynchronous schedule status is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -9461,12 +9461,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DEVICE_NOT_ATTACHED_</name>
++									<name>DEVICE_NOT_ATTACHED</name>
+ 									<description>Device not attached A zero indicates that the device did not attach successfully or was forcibly disconnected by the software writing a zero to the Run bit in the USBCMD register. It does not state the device being disconnected or suspended.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DEVICE_ATTACHED__A_</name>
++									<name>DEVICE_ATTACHED</name>
+ 									<description>Device attached.  A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -12960,12 +12960,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DEVICE_NOT_ATTACHED_</name>
++									<name>DEVICE_NOT_ATTACHED</name>
+ 									<description>Device not attached A zero indicates that the device did not attach successfully or was forcibly disconnected by the software writing a zero to the Run bit in the USBCMD register. It does not state the device being disconnected or suspended.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>DEVICE_ATTACHED__A_</name>
++									<name>DEVICE_ATTACHED</name>
+ 									<description>Device attached.  A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -17687,7 +17687,7 @@
+ 				<enumeratedValues>							
+ 				<name>ENUM</name>							
+ 					<enumeratedValue>						
+-						<name>INPUT_TO_THE_EVENT_R</name>					
++						<name>INPUT_TO_THE_EVENT_ROUTER</name>					
+ 						<description>Input to the event router.</description>					
+ 						<value>0x0</value>					
+ 					</enumeratedValue>						
+@@ -17702,7 +17702,7 @@
+ 						<value>0x2</value>					
+ 					</enumeratedValue>						
+ 					<enumeratedValue>						
+-						<name>INPUT_TO_THE_EVENT_R</name>					
++						<name>INPUT_TO_THE_EVENT_ROUTER_3</name>					
+ 						<description>Input to the event router.</description>					
+ 						<value>0x3</value>					
+ 					</enumeratedValue>						
+@@ -17715,7 +17715,7 @@
+ 				<enumeratedValues>							
+ 				<name>ENUM</name>							
+ 					<enumeratedValue>						
+-						<name>INPUT_TO_EVENT_ROUTE</name>					
++						<name>INPUT_TO_EVENT_ROUTER</name>					
+ 						<description>Input to event router.</description>					
+ 						<value>0x0</value>					
+ 					</enumeratedValue>						
+@@ -17730,7 +17730,7 @@
+ 						<value>0x2</value>					
+ 					</enumeratedValue>						
+ 					<enumeratedValue>						
+-						<name>INPUT_TO_EVENT_ROUTE</name>					
++						<name>INPUT_TO_EVENT_ROUTE_3</name>					
+ 						<description>Input to event router.</description>					
+ 						<value>0x3</value>					
+ 					</enumeratedValue>						
+@@ -37582,12 +37582,12 @@
+ 				<enumeratedValues>											
+ 				<name>ENUM</name>											
+ 					<enumeratedValue>										
+-						<name>BREAK_INTERRUPT_STAT</name>									
++						<name>INACTIVE</name>									
+ 						<description>Break interrupt status is inactive.</description>									
+ 						<value>0</value>									
+ 					</enumeratedValue>										
+ 					<enumeratedValue>										
+-						<name>BREAK_INTERRUPT_STAT</name>									
++						<name>ACTIVE</name>									
+ 						<description>Break interrupt status is active.</description>									
+ 						<value>1</value>									
+ 					</enumeratedValue>										
+@@ -39631,12 +39631,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -39789,12 +39789,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -40017,10 +40017,7 @@
+ 					
+ 				</register>
+ 				<register>
+-					<dim>3</dim>
+-					<dimIncrement>0x4</dimIncrement>
+-					<dimIndex>18-20</dimIndex>
+-					<name>SFSP1_%s</name>
++					<name>SFSP1_18</name>
+ 					<description>Pin configuration register for pins P1</description>
+ 					<addressOffset>0x0C8</addressOffset>
+ 					<access>read-write</access>
+@@ -40118,12 +40115,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -40174,10 +40171,315 @@
+ 					</fields>
+ 				</register>
+ 				<register>
+-					<dim>3</dim>
+-					<dimIncrement>0x4</dimIncrement>
+-					<dimIndex>0-2</dimIndex>
+-					<name>SFSP2_%s</name>
++					<name>SFSP1_19</name>
++					<description>Pin configuration register for pins P1</description>
++					<addressOffset>0x0CC</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP1_20</name>
++					<description>Pin configuration register for pins P1</description>
++					<addressOffset>0x0D0</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP2_0</name>
+ 					<description>Pin configuration register for pins P2</description>
+ 					<addressOffset>0x100</addressOffset>
+ 					<access>read-write</access>
+@@ -40275,12 +40577,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -40331,10 +40633,315 @@
+ 					</fields>
+ 				</register>
+ 				<register>
+-					<dim>3</dim>
+-					<dimIncrement>0x4</dimIncrement>
+-					<dimIndex>3-5</dimIndex>
+-					<name>SFSP2_%s</name>
++					<name>SFSP2_1</name>
++					<description>Pin configuration register for pins P2</description>
++					<addressOffset>0x104</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP2_2</name>
++					<description>Pin configuration register for pins P2</description>
++					<addressOffset>0x108</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP2_3</name>
+ 					<description>Pin configuration register for pins P2</description>
+ 					<addressOffset>0x10C</addressOffset>
+ 					<access>read-write</access>
+@@ -40504,6 +41111,346 @@
+ 					</fields>
+ 				</register>
+ 				<register>
++					<name>SFSP2_4</name>
++					<description>Pin configuration register for pins P2</description>
++					<addressOffset>0x110</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>							
++						<field>						
++							<name>MODE</name>					
++							<description>Select pin function.</description>					
++							<bitRange>[2:0]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>FUNCTION_0_DEFAULT</name>			
++									<description>Function 0 (default)</description>			
++									<value>0x0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_1</name>			
++									<description>Function 1</description>			
++									<value>0x1</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_2</name>			
++									<description>Function 2</description>			
++									<value>0x2</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_3</name>			
++									<description>Function 3</description>			
++									<value>0x3</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_4</name>			
++									<description>Function 4</description>			
++									<value>0x4</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_5</name>			
++									<description>Function 5</description>			
++									<value>0x5</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_6</name>			
++									<description>Function 6</description>			
++									<value>0x6</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_7</name>			
++									<description>Function 7</description>			
++									<value>0x7</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EPD</name>					
++							<description>Enable pull-down resistor at pad.</description>					
++							<bitRange>[3:3]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>DISABLE_PULL_DOWN</name>			
++									<description>Disable pull-down.</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ENABLE_PULL_DOWN</name>			
++									<description>Enable pull-down. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EPUN</name>					
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>					
++							<bitRange>[4:4]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>ENABLE_PULL_UP</name>			
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>DISABLE_PULL_UP</name>			
++									<description>Disable pull-up</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>RESERVED</name>					
++							<description>Reserved</description>					
++							<bitRange>[5:5]</bitRange>					
++							
++						</field>						
++						<field>						
++							<name>EZI</name>					
++							<description>Input buffer enable. The input buffer is disabled by default at reset but must be enabled to transfer data from the I/O buffer to the pad.</description>					
++							<bitRange>[6:6]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>DISABLE_INPUT_BUFFER</name>			
++									<description>Disable input buffer</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ENABLE_INPUT_BUFFER</name>			
++									<description>Enable input buffer</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>ZIF</name>					
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>					
++							<bitRange>[7:7]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>ENABLE_INPUT_GLITCH</name>			
++									<description>Enable input glitch filter</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>DISABLE_INPUT_GLITCH</name>			
++									<description>Disable input glitch filter</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EHD</name>					
++							<description>Select drive strength.</description>					
++							<bitRange>[9:8]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>NORMAL_DRIVE_4_MA_D</name>			
++									<description>Normal-drive: 4 mA drive strength</description>			
++									<value>0x0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>MEDIUM_DRIVE_8_MA_D</name>			
++									<description>Medium-drive: 8 mA drive strength</description>			
++									<value>0x1</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>HIGH_DRIVE_14_MA_DR</name>			
++									<description>High-drive: 14 mA drive strength</description>			
++									<value>0x2</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ULTRA_HIGH_DRIVE_20</name>			
++									<description>Ultra high-drive: 20 mA drive strength</description>			
++									<value>0x3</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>RESERVED</name>					
++							<description>Reserved</description>					
++							<bitRange>[31:10]</bitRange>					
++							
++						</field>						
++					</fields>
++				</register>
++				<register>
++					<name>SFSP2_5</name>
++					<description>Pin configuration register for pins P2</description>
++					<addressOffset>0x114</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>							
++						<field>						
++							<name>MODE</name>					
++							<description>Select pin function.</description>					
++							<bitRange>[2:0]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>FUNCTION_0_DEFAULT</name>			
++									<description>Function 0 (default)</description>			
++									<value>0x0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_1</name>			
++									<description>Function 1</description>			
++									<value>0x1</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_2</name>			
++									<description>Function 2</description>			
++									<value>0x2</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_3</name>			
++									<description>Function 3</description>			
++									<value>0x3</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_4</name>			
++									<description>Function 4</description>			
++									<value>0x4</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_5</name>			
++									<description>Function 5</description>			
++									<value>0x5</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_6</name>			
++									<description>Function 6</description>			
++									<value>0x6</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>FUNCTION_7</name>			
++									<description>Function 7</description>			
++									<value>0x7</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EPD</name>					
++							<description>Enable pull-down resistor at pad.</description>					
++							<bitRange>[3:3]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>DISABLE_PULL_DOWN</name>			
++									<description>Disable pull-down.</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ENABLE_PULL_DOWN</name>			
++									<description>Enable pull-down. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EPUN</name>					
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>					
++							<bitRange>[4:4]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>ENABLE_PULL_UP</name>			
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>DISABLE_PULL_UP</name>			
++									<description>Disable pull-up</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>RESERVED</name>					
++							<description>Reserved</description>					
++							<bitRange>[5:5]</bitRange>					
++							
++						</field>						
++						<field>						
++							<name>EZI</name>					
++							<description>Input buffer enable. The input buffer is disabled by default at reset but must be enabled to transfer data from the I/O buffer to the pad.</description>					
++							<bitRange>[6:6]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>DISABLE_INPUT_BUFFER</name>			
++									<description>Disable input buffer</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ENABLE_INPUT_BUFFER</name>			
++									<description>Enable input buffer</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>ZIF</name>					
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>					
++							<bitRange>[7:7]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>ENABLE_INPUT_GLITCH</name>			
++									<description>Enable input glitch filter</description>			
++									<value>0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>DISABLE_INPUT_GLITCH</name>			
++									<description>Disable input glitch filter</description>			
++									<value>1</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>EHD</name>					
++							<description>Select drive strength.</description>					
++							<bitRange>[9:8]</bitRange>					
++							<enumeratedValues>					
++								<name>ENUM</name>					
++								<enumeratedValue>				
++									<name>NORMAL_DRIVE_4_MA_D</name>			
++									<description>Normal-drive: 4 mA drive strength</description>			
++									<value>0x0</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>MEDIUM_DRIVE_8_MA_D</name>			
++									<description>Medium-drive: 8 mA drive strength</description>			
++									<value>0x1</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>HIGH_DRIVE_14_MA_DR</name>			
++									<description>High-drive: 14 mA drive strength</description>			
++									<value>0x2</value>			
++								</enumeratedValue>				
++								<enumeratedValue>				
++									<name>ULTRA_HIGH_DRIVE_20</name>			
++									<description>Ultra high-drive: 20 mA drive strength</description>			
++									<value>0x3</value>			
++								</enumeratedValue>				
++							</enumeratedValues>					
++						</field>						
++						<field>						
++							<name>RESERVED</name>					
++							<description>Reserved</description>					
++							<bitRange>[31:10]</bitRange>					
++							
++						</field>						
++					</fields>
++				</register>
++				<register>
+ 					<dim>7</dim>
+ 					<dimIncrement>0x4</dimIncrement>
+ 					<dimIndex>6-12</dimIndex>
+@@ -40605,12 +41552,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -40661,10 +41608,7 @@
+ 					</fields>
+ 				</register>
+ 				<register>
+-					<dim>3</dim>
+-					<dimIncrement>0x4</dimIncrement>
+-					<dimIndex>0-2</dimIndex>
+-					<name>SFSP3_%s</name>
++					<name>SFSP3_0</name>
+ 					<description>Pin configuration register for pins P3</description>
+ 					<addressOffset>0x180</addressOffset>
+ 					<access>read-write</access>
+@@ -40762,12 +41706,320 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP3_1</name>
++					<description>Pin configuration register for pins P3</description>
++					<addressOffset>0x184</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
++									<description>Fast (medium noise with fast speed)</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
++							<bitRange>[31:8]</bitRange>				
++							
++						</field>					
++					</fields>
++				</register>
++				<register>
++					<name>SFSP3_2</name>
++					<description>Pin configuration register for pins P3</description>
++					<addressOffset>0x188</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EHS</name>				
++							<description>Select Slew rate.</description>				
++							<bitRange>[5:5]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
++									<description>Slow (low noise with medium speed)</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41076,12 +42328,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41234,12 +42486,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41391,12 +42643,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41548,12 +42800,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41705,12 +42957,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -41761,10 +43013,7 @@
+ 					</fields>
+ 				</register>
+ 				<register>
+-					<dim>3</dim>
+-					<dimIncrement>0x4</dimIncrement>
+-					<dimIndex>0-2</dimIndex>
+-					<name>SFSP8_%s</name>
++					<name>SFSP8_0</name>
+ 					<description>Pin configuration register for pins P8</description>
+ 					<addressOffset>0x400</addressOffset>
+ 					<access>read-write</access>
+@@ -41856,19 +43105,176 @@
+ 							</enumeratedValues>				
+ 						</field>					
+ 						<field>					
+-							<name>EHS</name>				
+-							<description>Select Slew rate.</description>				
++							<name>RESERVED</name>				
++							<description>Reserved</description>				
+ 							<bitRange>[5:5]</bitRange>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
+-									<description>Slow (low noise with medium speed)</description>		
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
+-									<description>Fast (medium noise with fast speed)</description>		
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[7:7]</bitRange>
++							
++						</field>
++						<field>
++							<name>EHD</name>
++							<description>Select drive strength</description>
++							<bitRange>[9:8]</bitRange>
++							<enumeratedValues>
++								<name>ENUM</name>
++								<enumeratedValue>
++									<name>STANDARD_DRIVE_4_MA</name>
++									<description>Standard drive: 4 mA drive strength</description>
++									<value>0x0</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>MEDIUM_DRIVE_8_MA_D</name>
++									<description>Medium drive: 8 mA drive strength</description>
++									<value>0x1</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>HIGH_DRIVE_14_MA_DR</name>
++									<description>High drive: 14 mA drive strength</description>
++									<value>0x2</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>ULTRA_HIGH_DRIVE_20</name>
++									<description>Ultra-high drive: 20 mA drive strength</description>
++									<value>0x3</value>
++								</enumeratedValue>
++							</enumeratedValues>
++						</field>
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[31:10]</bitRange>
++							
++						</field>
++					</fields>
++				</register>
++				<register>
++					<name>SFSP8_1</name>
++					<description>Pin configuration register for pins P8</description>
++					<addressOffset>0x404</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+ 							</enumeratedValues>				
+@@ -41909,12 +43315,216 @@
+ 								</enumeratedValue>			
+ 							</enumeratedValues>				
+ 						</field>					
+-						<field>					
+-							<name>RESERVED</name>				
+-							<description>Reserved</description>				
+-							<bitRange>[31:8]</bitRange>				
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[7:7]</bitRange>
+ 							
++						</field>
++						<field>
++							<name>EHD</name>
++							<description>Select drive strength</description>
++							<bitRange>[9:8]</bitRange>
++							<enumeratedValues>
++								<name>ENUM</name>
++								<enumeratedValue>
++									<name>STANDARD_DRIVE_4_MA</name>
++									<description>Standard drive: 4 mA drive strength</description>
++									<value>0x0</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>MEDIUM_DRIVE_8_MA_D</name>
++									<description>Medium drive: 8 mA drive strength</description>
++									<value>0x1</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>HIGH_DRIVE_14_MA_DR</name>
++									<description>High drive: 14 mA drive strength</description>
++									<value>0x2</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>ULTRA_HIGH_DRIVE_20</name>
++									<description>Ultra-high drive: 20 mA drive strength</description>
++									<value>0x3</value>
++								</enumeratedValue>
++							</enumeratedValues>
++						</field>
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[31:10]</bitRange>
++							
++						</field>
++					</fields>
++				</register>
++				<register>
++					<name>SFSP8_2</name>
++					<description>Pin configuration register for pins P8</description>
++					<addressOffset>0x408</addressOffset>
++					<access>read-write</access>
++					<resetValue>0</resetValue>
++					<resetMask>0xFFFFFFFF</resetMask>
++					<fields>						
++						<field>					
++							<name>MODE</name>				
++							<description>Select pin function.</description>				
++							<bitRange>[2:0]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>FUNCTION_0_DEFAULT</name>		
++									<description>Function 0 (default)</description>		
++									<value>0x0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_1</name>		
++									<description>Function 1</description>		
++									<value>0x1</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_2</name>		
++									<description>Function 2</description>		
++									<value>0x2</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_3</name>		
++									<description>Function 3</description>		
++									<value>0x3</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_4</name>		
++									<description>Function 4</description>		
++									<value>0x4</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_5</name>		
++									<description>Function 5</description>		
++									<value>0x5</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_6</name>		
++									<description>Function 6</description>		
++									<value>0x6</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>FUNCTION_7</name>		
++									<description>Function 7</description>		
++									<value>0x7</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
+ 						</field>					
++						<field>					
++							<name>EPD</name>				
++							<description>Enable pull-down resistor at pad.</description>				
++							<bitRange>[3:3]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_PULL_DOWN</name>		
++									<description>Disable pull-down.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_PULL_DOWN</name>		
++									<description>Enable pull-down.Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EPUN</name>				
++							<description>Disable pull-up resistor at pad. By default, the pull-up resistor is enabled at reset.</description>				
++							<bitRange>[4:4]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_PULL_UP</name>		
++									<description>Enable pull-up. Enable both pull-down resistor and pull-up resistor for repeater mode.</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_PULL_UP</name>		
++									<description>Disable pull-up.</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>EZI</name>				
++							<description>Input buffer enable. The input buffer is disabled by default at reset and must be enabled for receiving.</description>				
++							<bitRange>[6:6]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_BUFFER</name>		
++									<description>Disable input buffer</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_BUFFER</name>		
++									<description>Enable input buffer</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>					
++							<name>ZIF</name>				
++							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
++							<bitRange>[7:7]</bitRange>				
++							<enumeratedValues>				
++								<name>ENUM</name>				
++								<enumeratedValue>			
++									<name>ENABLE_INPUT_GLITCH</name>		
++									<description>Enable input glitch filter</description>		
++									<value>0</value>		
++								</enumeratedValue>			
++								<enumeratedValue>			
++									<name>DISABLE_INPUT_GLITCH</name>		
++									<description>Disable input glitch filter</description>		
++									<value>1</value>		
++								</enumeratedValue>			
++							</enumeratedValues>				
++						</field>					
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[7:7]</bitRange>
++							
++						</field>
++						<field>
++							<name>EHD</name>
++							<description>Select drive strength</description>
++							<bitRange>[9:8]</bitRange>
++							<enumeratedValues>
++								<name>ENUM</name>
++								<enumeratedValue>
++									<name>STANDARD_DRIVE_4_MA</name>
++									<description>Standard drive: 4 mA drive strength</description>
++									<value>0x0</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>MEDIUM_DRIVE_8_MA_D</name>
++									<description>Medium drive: 8 mA drive strength</description>
++									<value>0x1</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>HIGH_DRIVE_14_MA_DR</name>
++									<description>High drive: 14 mA drive strength</description>
++									<value>0x2</value>
++								</enumeratedValue>
++								<enumeratedValue>
++									<name>ULTRA_HIGH_DRIVE_20</name>
++									<description>Ultra-high drive: 20 mA drive strength</description>
++									<value>0x3</value>
++								</enumeratedValue>
++							</enumeratedValues>
++						</field>
++						<field>
++							<name>RESERVED</name>
++							<description>Reserved</description>
++							<bitRange>[31:10]</bitRange>
++							
++						</field>
+ 					</fields>
+ 				</register>
+ 				<register>
+@@ -42019,12 +43629,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -42347,12 +43957,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -42676,12 +44286,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -42834,12 +44444,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -42991,12 +44601,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -43148,12 +44758,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -43305,12 +44915,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -43462,12 +45072,12 @@
+ 							<enumeratedValues>				
+ 								<name>ENUM</name>				
+ 								<enumeratedValue>			
+-									<name>SLOW_LOW_NOISE_WITH</name>		
++									<name>SLOW_LOW_NOISE_WITH_MEDIUM_SPEED</name>		
+ 									<description>Slow (low noise with medium speed)</description>		
+ 									<value>0</value>		
+ 								</enumeratedValue>			
+ 								<enumeratedValue>			
+-									<name>FAST_MEDIUM_NOISE_W</name>		
++									<name>FAST_MEDIUM_NOISE_WITH_FAST_SPEED</name>		
+ 									<description>Fast (medium noise with fast speed)</description>		
+ 									<value>1</value>		
+ 								</enumeratedValue>			
+@@ -50403,12 +52013,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>THE_MESSAGE_DIRECTIO</name>
++									<name>ACCEPTANCE_FILTER</name>
+ 									<description>The message direction bit (DIR) is used for acceptance filtering.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>THE_MESSAGE_DIRECTIO</name>
++									<name>NO_EFFECT</name>
+ 									<description>The message direction bit (DIR) has no effect on acceptance filtering.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -50421,12 +52031,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>THE_EXTENDED_IDENTIF</name>
++									<name>ACCEPTANCE_FILTER</name>
+ 									<description>The extended identifier bit (IDE) is used for acceptance filtering.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>THE_EXTENDED_IDENTIF</name>
++									<name>NO_EFFECT</name>
+ 									<description>The extended identifier bit (IDE) has no effect on acceptance filtering.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -50523,12 +52133,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>THE_MESSAGE_OBJECT_I</name>
++									<name>THE_MESSAGE_OBJECT_IS_CONFIGURED</name>
+ 									<description>The message object is configured and should be considered by the message handler.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>THE_MESSAGE_OBJECT_I</name>
++									<name>THE_MESSAGE_OBJECT_IS_IGNORED</name>
+ 									<description>The message object is ignored by the message handler.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -52213,12 +53823,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52324,12 +53934,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52435,12 +54045,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52546,12 +54156,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52657,12 +54267,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52768,12 +54378,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52879,12 +54489,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -52990,12 +54600,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53101,12 +54711,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53212,12 +54822,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53328,12 +54938,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53444,12 +55054,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53555,12 +55165,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53666,12 +55276,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53712,8 +55322,8 @@
+ 						<value>0x1</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>TBD__I2S0_TX_MWS</name>											
+-						<description>TBD - I2S0_TX_MWS</description>											
++						<name>I2S0_TX_MWS</name>											
++						<description>I2S0_TX_MWS</description>											
+ 						<value>0x2</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+@@ -53782,12 +55392,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -53898,12 +55508,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54014,12 +55624,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54125,12 +55735,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54236,12 +55846,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54347,12 +55957,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54463,12 +56073,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54579,12 +56189,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54690,12 +56300,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54806,12 +56416,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -54922,12 +56532,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -55068,12 +56678,12 @@
+ 				<enumeratedValues>													
+ 				<name>ENUM</name>													
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -55186,12 +56796,12 @@
+ 				<name>ENUM</name>													
+ 																	
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -55308,12 +56918,12 @@
+ 				<name>ENUM</name>													
+ 																	
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -55425,12 +57035,12 @@
+ 				<name>ENUM</name>													
+ 																	
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -55542,12 +57152,12 @@
+ 				<name>ENUM</name>													
+ 																	
+ 					<enumeratedValue>												
+-						<name>DISABLE__SYNCHRONIZ</name>											
++						<name>DISABLE_SYNCHRONIZATION</name>											
+ 						<description>Disable   synchronization.</description>											
+ 						<value>0</value>											
+ 					</enumeratedValue>												
+ 					<enumeratedValue>												
+-						<name>ENABLE__SYNCHRONIZA</name>											
++						<name>ENABLE_SYNCHRONIZATION</name>											
+ 						<description>Enable   synchronization.</description>											
+ 						<value>1</value>											
+ 					</enumeratedValue>												
+@@ -56327,7 +57937,7 @@
+ 		<resetMask>0xFFFFFFFF</resetMask>									
+ 		<fields>									
+ 			<field>								
+-				<name>TRIGGER__MASK</name>							
++				<name>TRIGGER_MASK</name>							
+ 				<description>00 = triggers off  01 = software trigger only  10 = external trigger only  11 = both triggers allowed</description>							
+ 				<bitRange>[1:0]</bitRange>							
+ 			</field>								
+@@ -58066,162 +59676,162 @@
+ 					<resetMask>0x00000000</resetMask>
+ 					<fields>
+ 						<field>
+-							<name>CLRP00</name>
++							<name>CLRP0</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[0:0]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP01</name>
++							<name>CLRP1</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[1:1]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP02</name>
++							<name>CLRP2</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[2:2]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP03</name>
++							<name>CLRP3</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[3:3]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP04</name>
++							<name>CLRP4</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[4:4]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP05</name>
++							<name>CLRP5</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[5:5]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP06</name>
++							<name>CLRP6</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[6:6]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP07</name>
++							<name>CLRP7</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[7:7]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP08</name>
++							<name>CLRP8</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[8:8]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP09</name>
++							<name>CLRP9</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[9:9]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP010</name>
++							<name>CLRP10</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[10:10]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP011</name>
++							<name>CLRP11</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[11:11]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP012</name>
++							<name>CLRP12</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[12:12]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP013</name>
++							<name>CLRP13</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[13:13]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP014</name>
++							<name>CLRP14</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[14:14]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP015</name>
++							<name>CLRP15</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[15:15]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP016</name>
++							<name>CLRP16</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[16:16]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP017</name>
++							<name>CLRP17</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[17:17]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP018</name>
++							<name>CLRP18</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[18:18]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP019</name>
++							<name>CLRP19</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[19:19]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP020</name>
++							<name>CLRP20</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[20:20]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP021</name>
++							<name>CLRP21</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[21:21]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP022</name>
++							<name>CLRP22</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[22:22]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP023</name>
++							<name>CLRP23</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[23:23]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP024</name>
++							<name>CLRP24</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[24:24]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP025</name>
++							<name>CLRP25</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[25:25]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP026</name>
++							<name>CLRP26</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[26:26]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP027</name>
++							<name>CLRP27</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[27:27]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP028</name>
++							<name>CLRP28</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[28:28]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP029</name>
++							<name>CLRP29</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[29:29]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP030</name>
++							<name>CLRP30</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[30:30]</bitRange>
+ 						</field>
+ 						<field>
+-							<name>CLRP031</name>
++							<name>CLRP31</name>
+ 							<description>Clear output bits: 0 = No operation. 1 = Clear output bit.</description>
+ 							<bitRange>[31:31]</bitRange>
+ 						</field>
