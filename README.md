@@ -12,6 +12,6 @@ additional functionality.
 Download from https://www.lpcware.com/content/nxpfile/lpc43sxx-svd-file
 
 ```
-svd2rust -i LPC43xx_43Sxx.svd gpio > src/peripheral/gpio.rs
-rustfmt src/peripheral/gpio.rs
+patch -p0 LPC43xx_43Sxx.svd LPC43xx.patch
+svd2rust -i LPC43xx_43Sxx.svd | rustfmt >src/lib.rs
 ```
