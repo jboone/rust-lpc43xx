@@ -1,5 +1,5 @@
 --- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
-+++ LPC43xx.svd	2017-08-19 14:27:18.779760042 -0700
++++ LPC43xx.svd	2017-09-01 16:24:47.641283810 -0700
 @@ -142,82 +142,82 @@
  				<enumeratedValues>												
  				<name>ENUM</name>												
@@ -471,6 +471,42 @@
  						<description>Input to event router.</description>					
  						<value>0x3</value>					
  					</enumeratedValue>						
+@@ -22525,7 +22525,7 @@
+ 			<enumeratedValues>												
+ 			<name>ENUM</name>												
+ 				<enumeratedValue>											
+-					<name>1</name>										
++					<name>PEQ1</name>										
+ 					<description>1</description>										
+ 					<value>0x0</value>										
+ 				</enumeratedValue>											
+@@ -22540,7 +22540,7 @@
+ 					<value>0x2</value>										
+ 				</enumeratedValue>											
+ 				<enumeratedValue>											
+-					<name>8</name>										
++					<name>PEQ8</name>										
+ 					<description>8</description>										
+ 					<value>0x3</value>										
+ 				</enumeratedValue>											
+@@ -22577,7 +22577,7 @@
+ 			<enumeratedValues>												
+ 			<name>ENUM</name>												
+ 				<enumeratedValue>											
+-					<name>1</name>										
++					<name>NEQ1</name>										
+ 					<description>1</description>										
+ 					<value>0x0</value>										
+ 				</enumeratedValue>											
+@@ -22592,7 +22592,7 @@
+ 					<value>0x2</value>										
+ 				</enumeratedValue>											
+ 				<enumeratedValue>											
+-					<name>4</name>										
++					<name>NEQ4</name>										
+ 					<description>4</description>										
+ 					<value>0x3</value>										
+ 				</enumeratedValue>											
 @@ -37582,12 +37582,12 @@
  				<enumeratedValues>											
  				<name>ENUM</name>											
