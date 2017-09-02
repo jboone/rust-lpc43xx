@@ -15,3 +15,13 @@ Download from https://www.lpcware.com/content/nxpfile/lpc43sxx-svd-file
 patch -p0 LPC43xx_43Sxx.svd LPC43xx.patch
 svd2rust -i LPC43xx_43Sxx.svd | rustfmt >src/lib.rs
 ```
+
+# Documentation
+
+To build local documentation, which is far more readable than the src/lib.rs file:
+
+```
+cargo doc
+```
+
+The lpc43xx module's output can be opened from target/doc/lpc43xx/index.html.
