@@ -1,5 +1,5 @@
 --- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
-+++ LPC43xx.svd	2017-09-03 15:08:26.253663175 -0700
++++ LPC43xx.svd	2017-09-03 15:32:27.705724544 -0700
 @@ -142,82 +142,82 @@
  				<enumeratedValues>												
  				<name>ENUM</name>												
@@ -522,6 +522,66 @@
  					<description>4</description>										
  					<value>0x3</value>										
  				</enumeratedValue>											
+@@ -25919,12 +25919,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_DISABLE</name>
++									<name>DISABLED</name>
+ 									<description>Autoblocking disabled</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_ENABLED</name>
++									<name>ENABLED</name>
+ 									<description>Autoblocking enabled</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -26066,12 +26066,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_DISABLE</name>
++									<name>DISABLED</name>
+ 									<description>Autoblocking disabled</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_ENABLED</name>
++									<name>ENABLED</name>
+ 									<description>Autoblocking enabled</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -26213,12 +26213,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_DISABLE</name>
++									<name>DISABLED</name>
+ 									<description>Autoblocking disabled</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_ENABLED</name>
++									<name>ENABLED</name>
+ 									<description>Autoblocking enabled</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -26360,12 +26360,12 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_DISABLE</name>
++									<name>DISABLED</name>
+ 									<description>Autoblocking disabled</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTOBLOCKING_ENABLED</name>
++									<name>ENABLED</name>
+ 									<description>Autoblocking enabled</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
 @@ -26604,7 +26604,7 @@
  							<enumeratedValues>
  								<name>ENUM</name>
@@ -2954,7 +3014,7 @@
 +									<value>0x7</value>		
 +								</enumeratedValue>			
 +							</enumeratedValues>				
- 						</field>					
++						</field>					
 +						<field>					
 +							<name>EPD</name>				
 +							<description>Enable pull-down resistor at pad.</description>				
@@ -3008,7 +3068,7 @@
 +									<value>1</value>		
 +								</enumeratedValue>			
 +							</enumeratedValues>				
-+						</field>					
+ 						</field>					
 +						<field>					
 +							<name>ZIF</name>				
 +							<description>Input glitch filter. Disable the input glitch filter for clocking signals higher than 30 MHz.</description>				
