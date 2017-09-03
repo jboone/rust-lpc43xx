@@ -1,5 +1,5 @@
 --- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
-+++ LPC43xx.svd	2017-09-03 14:17:12.242628704 -0700
++++ LPC43xx.svd	2017-09-03 14:54:21.311928518 -0700
 @@ -142,82 +142,82 @@
  				<enumeratedValues>												
  				<name>ENUM</name>												
@@ -939,6 +939,126 @@
  									<description>Auto is disabled.</description>
  									<value>0</value>
  								</enumeratedValue>
+@@ -29991,12 +29991,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>AUTO_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTO_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Auto is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30011,12 +30011,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Wake-up is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Wake-up is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30068,12 +30068,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>AUTO_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTO_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Auto is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30088,12 +30088,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Wake-up is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Wake-up is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30145,12 +30145,12 @@
+ 								<name>ENUM</name>
+ 								
+ 								<enumeratedValue>
+-									<name>AUTO_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTO_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Auto is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30165,12 +30165,12 @@
+ 								<name>ENUM</name>
+ 								
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Wake-up is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Wake-up is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30222,12 +30222,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>AUTO_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>AUTO_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Auto is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
+@@ -30242,12 +30242,12 @@
+ 								<name>ENUM</name>
+ 
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Wake-up is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+ 								<enumeratedValue>
+-									<name>WAKE_UP_IS_ENABLED_</name>
++									<name>ENABLED</name>
+ 									<description>Wake-up is enabled.</description>
+ 									<value>1</value>
+ 								</enumeratedValue>
 @@ -32173,7 +32173,7 @@
  							<enumeratedValues>
  								<name>ENUM</name>
@@ -966,6 +1086,15 @@
  									<description>Auto is disabled.</description>
  									<value>0</value>
  								</enumeratedValue>
+@@ -32351,7 +32351,7 @@
+ 					</fields>
+ 				</register>
+ 				<register>
+-					<name>CLK_APB0_UART1_BUS_CFG</name>
++					<name>CLK_APB0_UART1_CFG</name>
+ 					<description>CLK_APB2_UART1 clock configuration register</description>
+ 					<addressOffset>0x400</addressOffset>
+ 					<access>read-write</access>
 @@ -32383,7 +32383,7 @@
  							<enumeratedValues>
  								<name>ENUM</name>
@@ -2717,7 +2846,7 @@
 +							<name>RESERVED</name>
 +							<description>Reserved</description>
 +							<bitRange>[7:7]</bitRange>
- 							
++							
 +						</field>
 +						<field>
 +							<name>EHD</name>
@@ -2751,7 +2880,7 @@
 +							<name>RESERVED</name>
 +							<description>Reserved</description>
 +							<bitRange>[31:10]</bitRange>
-+							
+ 							
 +						</field>
 +					</fields>
 +				</register>
