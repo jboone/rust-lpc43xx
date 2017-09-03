@@ -1,5 +1,5 @@
 --- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
-+++ LPC43xx.svd	2017-09-01 16:24:47.641283810 -0700
++++ LPC43xx.svd	2017-09-03 14:17:12.242628704 -0700
 @@ -142,82 +142,82 @@
  				<enumeratedValues>												
  				<name>ENUM</name>												
@@ -507,6 +507,510 @@
  					<description>4</description>										
  					<value>0x3</value>										
  				</enumeratedValue>											
+@@ -26604,7 +26604,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -26674,7 +26674,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -26744,7 +26744,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -26814,7 +26814,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -26884,7 +26884,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -26954,7 +26954,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27024,7 +27024,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27094,7 +27094,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27164,7 +27164,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27235,7 +27235,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27305,7 +27305,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27375,7 +27375,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27445,7 +27445,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27515,7 +27515,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27585,7 +27585,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27655,7 +27655,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27725,7 +27725,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27795,7 +27795,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27865,7 +27865,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -27935,7 +27935,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28005,7 +28005,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28075,7 +28075,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28146,7 +28146,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28216,7 +28216,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28286,7 +28286,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28380,7 +28380,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28450,7 +28450,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28520,7 +28520,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28590,7 +28590,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28660,7 +28660,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28730,7 +28730,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28800,7 +28800,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28870,7 +28870,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -28940,7 +28940,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29010,7 +29010,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29080,7 +29080,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29150,7 +29150,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29220,7 +29220,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29290,7 +29290,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29360,7 +29360,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29430,7 +29430,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29500,7 +29500,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29570,7 +29570,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29640,7 +29640,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29710,7 +29710,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29780,7 +29780,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29850,7 +29850,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -29920,7 +29920,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32173,7 +32173,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32243,7 +32243,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32313,7 +32313,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32383,7 +32383,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32453,7 +32453,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32523,7 +32523,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32593,7 +32593,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
+@@ -32663,7 +32663,7 @@
+ 							<enumeratedValues>
+ 								<name>ENUM</name>
+ 								<enumeratedValue>
+-									<name>DISABLED_</name>
++									<name>DISABLED</name>
+ 									<description>Auto is disabled.</description>
+ 									<value>0</value>
+ 								</enumeratedValue>
 @@ -37582,12 +37582,12 @@
  				<enumeratedValues>											
  				<name>ENUM</name>											
