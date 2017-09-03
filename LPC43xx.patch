@@ -1,5 +1,5 @@
 --- LPC43xx.svd.orig	2017-08-03 20:37:12.501824574 -0700
-+++ LPC43xx.svd	2017-09-03 14:54:21.311928518 -0700
++++ LPC43xx.svd	2017-09-03 15:08:26.253663175 -0700
 @@ -142,82 +142,82 @@
  				<enumeratedValues>												
  				<name>ENUM</name>												
@@ -435,6 +435,21 @@
  									<description>Device attached.  A one indicates that the device successfully attached and is operating in either high-speed mode or full-speed mode as indicated by the High Speed Port bit in this register.</description>
  									<value>1</value>
  								</enumeratedValue>
+@@ -17557,12 +17557,12 @@
+ 				<enumeratedValues>							
+ 				<name>ENUM</name>							
+ 					<enumeratedValue>						
+-						<name>ENABLE_USB0_PHY_POWE</name>					
++						<name>ENABLE</name>					
+ 						<description>Enable USB0 PHY power.</description>					
+ 						<value>0</value>					
+ 					</enumeratedValue>						
+ 					<enumeratedValue>						
+-						<name>DISABLE_USB0_PHY</name>					
++						<name>DISABLE</name>					
+ 						<description>Disable USB0 PHY. PHY powered down.</description>					
+ 						<value>1</value>					
+ 					</enumeratedValue>						
 @@ -17687,7 +17687,7 @@
  				<enumeratedValues>							
  				<name>ENUM</name>							
